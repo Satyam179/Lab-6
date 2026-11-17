@@ -16,9 +16,9 @@ Conduct dynamic web application analysis by intercepting and comparing HTTP requ
 
 See [Experiment_Results.md](Experiment_Results.md) for procedure, request/response observations, and limitations.
 
-## Evidence files prepared separately
+## Uploaded evidence
 
-The following **locally prepared files are not yet uploaded to this GitHub folder**:
+The following files have been uploaded to this GitHub repository:
 - `Lab6_Burp_Suite_Report.pdf` (seven-page PDF report)
 - `01_Docker_DVWA_Startup.png`
 - `02_DVWA_Security_Low.png`
