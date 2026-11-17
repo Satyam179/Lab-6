@@ -67,7 +67,7 @@ To intercept and analyze HTTP requests and responses sent between a web browser 
 All three locally authorized **HTTP** request manipulations were carried out and their observed results documented with screenshots and a PDF report prepared outside GitHub.
 
 ## Evidence checklist
-The prepared seven-page report and ten redacted screenshots remain to be uploaded to the repository. Keep them under `Lab6/` alongside this file:
+The seven-page report and ten redacted screenshots have been uploaded to the root of this standalone `Lab-6` repository:
 - `Lab6_Burp_Suite_Report.pdf`
 - `01_Docker_DVWA_Startup.png`
 - `02_DVWA_Security_Low.png`
