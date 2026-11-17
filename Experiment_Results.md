@@ -80,8 +80,22 @@ The seven-page report and ten redacted screenshots have been uploaded to the roo
 - `09_Invalid_Session_Redirect.png`
 - `10_Modified_User_Agent.png`
 
-## Outstanding requirements
-The lab instructions also call for separate browser proxy configuration, Burp CA certificate installation, and HTTPS interception. The supplied screenshots and observed steps do **not** establish those tasks as completed. Additional real evidence is necessary before claiming full compliance.
+## Additional test: Firefox HTTP/HTTPS proxy and certificate (18 Nov 2026)
+
+**Procedure and observations:**
+
+1. Configured Firefox's separate HTTP and HTTPS proxies to `127.0.0.1:8080`.
+2. Loaded `http://burpsuite` in Firefox, showing traffic was routed to Burp.
+3. Imported the PortSwigger CA into Firefox; it appeared in the Firefox Certificate Manager > Authorities list.
+4. Enabled Burp Proxy interception and visited `https://example.com` using Firefox.
+5. Observed `https://example.com/` GET requests in the interception queue. Burp also intercepted other Firefox background HTTPS requests.
+6. In HTTP History, confirmed `GET https://example.com/` with **TLS checked** and **HTTP 200 OK**.
+
+**Result:** Separate Firefox proxy configuration, certificate import, and HTTPS interception were demonstrated. This is a passive HTTPS inspection demonstration only, not testing for vulnerabilities on an external website.
+
+**Evidence status:** The existing seven-page PDF and screenshots 01-10 are already uploaded. A revised ten-page PDF and screenshots 11-15 have been prepared locally and **still need to be uploaded** to this repository.
+
+**Remaining submission tasks:** Add the new five screenshots, replace or supersede the old report with the revised report, fill in student details, upload the PDF to the college portal, and restore Firefox's normal proxy/certificate settings after the lab.
 
 ## Ethics and attribution
 Testing was limited to the user's own local intentionally vulnerable DVWA instance. DVWA is third-party software and is not submitted as original student source code. Session token values must be redacted from screenshots committed to public repositories.
