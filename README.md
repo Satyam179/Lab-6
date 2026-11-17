@@ -33,8 +33,21 @@ The following files have been uploaded to this GitHub repository:
 
 Screenshots prepared for publication have session identifiers redacted.
 
-## Important limitations
+## Additional Firefox proxy, CA and HTTPS verification (18 Nov 2026)
 
-These observations were made with **HTTP** traffic in Burp's built-in browser. There is **no evidence yet** of setting up a separate browser's manual proxy, installing the Burp CA certificate in that browser, or intercepting **HTTPS** traffic. These remain outstanding parts of the lab requirements.
+After the original DVWA tests, Firefox was configured with a **manual HTTP and HTTPS proxy** at `127.0.0.1:8080`. Firefox successfully opened `http://burpsuite`, and the imported **PortSwigger CA** appeared under **Firefox Certificate Manager > Authorities**.
+
+Burp Proxy Intercept captured Firefox's HTTPS requests. In HTTP History, `GET https://example.com/` appeared with **TLS checked** and **HTTP 200 OK**. No external-site vulnerability test or request manipulation was performed.
+
+**Additional evidence prepared but not yet uploaded to GitHub:**
+
+- `Lab6_Final_Updated_Report.pdf` - revised ten-page report, to replace the earlier seven-page PDF for submission
+- `11_Firefox_Proxy_Configuration.png`
+- `12_Burp_Welcome_Proxy_Verification.png`
+- `13_PortSwigger_CA_in_Firefox.png`
+- `14_HTTPS_Intercept_Queue.png`
+- `15_HTTPS_History_ExampleDotCom.png`
+
+The lab portal submission is a separate step. After the demo, restore Firefox's normal proxy settings and remove the lab CA trust.
 
 This lab did not require original application source code; DVWA is a third-party learning application. The report and notes document student-observed experiments rather than claiming ownership of DVWA source.
